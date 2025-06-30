@@ -1,8 +1,9 @@
-from telegram import Update, ParseMode
+from telegram import Update
+from telegram.constants import ParseMode
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")  # Токен берётся из переменной среды
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 async def mention_all(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
