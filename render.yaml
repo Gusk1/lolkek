@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tg-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: 7998128984:AAHZZeD42td6cOUypPU_fNOhla7Dn4pfat0
